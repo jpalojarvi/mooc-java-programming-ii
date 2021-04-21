@@ -31,4 +31,8 @@ public class Container {
     public int getCurrentCapacity() {
         return currentCapacity;
     }
+
+    public void setCurrentCapacity(int currentCapacity) {
+        this.currentCapacity = currentCapacity;
+    }
 }
