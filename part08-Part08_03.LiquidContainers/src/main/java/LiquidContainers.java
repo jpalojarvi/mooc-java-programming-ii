@@ -31,14 +31,20 @@ public class LiquidContainers {
                     second.add(amount);
                     first.setCurrentCapacity(first.getCurrentCapacity() - amount);
 
-                }
-
-                else if (amount > first.getCurrentCapacity()) {
+                } else if (amount > first.getCurrentCapacity()) {
                     second.setCurrentCapacity(first.getCurrentCapacity());
                     first.setCurrentCapacity(0);
 
                 }
+            }
 
+            if (command.equals("remove")) {
+                if (amount <= second.getCurrentCapacity()) {
+                    second.remove(amount);
+
+                } else if (amount > second.getCurrentCapacity()) {
+                    second.setCurrentCapacity(0);
+                }
             }
         }
     }

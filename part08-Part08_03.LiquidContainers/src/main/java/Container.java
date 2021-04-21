@@ -35,4 +35,8 @@ public class Container {
     public void setCurrentCapacity(int currentCapacity) {
         this.currentCapacity = currentCapacity;
     }
+
+    public void remove(int amount) {
+        this.setCurrentCapacity(this.getCurrentCapacity()-amount);
+    }
 }
