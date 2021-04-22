@@ -9,8 +9,15 @@ public class Main {
         TodoList list = new TodoList();
         Scanner scanner = new Scanner(System.in);
 
+        list.add("one");
+        list.add("two");
+        list.add("three");
+
         UserInterface ui = new UserInterface(list, scanner);
         ui.start();
+        list.print();
 
+//        UserInterface ui = new UserInterface(list, scanner);
+//        ui.start();
     }
 }
