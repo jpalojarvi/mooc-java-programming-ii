@@ -33,9 +33,9 @@ public class Main {
 
         VehicleRegistry vr = new VehicleRegistry();
         vr.add(new LicensePlate("FI", "AAA-111"), "Arto");
-        
+
         vr.printLicensePlates();
-        
+
         vr.printOwners();
     }
 }
