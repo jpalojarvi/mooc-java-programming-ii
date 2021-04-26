@@ -17,6 +17,21 @@ public class Program {
         System.out.println(facility.contents("a14"));
         System.out.println(facility.contents("f156"));
 
+        facility.remove("f156", "rollerblades");
+
+        System.out.println(facility.contents("f156"));
+
+        facility.remove("f156", "rollerblades");
+
+        System.out.println(facility.storageUnits());
+        StorageFacility unit = new StorageFacility();
+        unit.add("a111", "mouse");
+        unit.add("a111", "cheese");
+        unit.add("a111", "cheese");
+        unit.add("b123", "projector");
+        unit.add("g63", "ice skates");
+        unit.remove("b123", "projector");
+        System.out.println(unit.storageUnits());
 
     }
 }
