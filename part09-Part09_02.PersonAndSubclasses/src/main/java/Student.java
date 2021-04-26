@@ -14,4 +14,10 @@ public class Student extends Person {
         return this.studyCredits;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\n  Study credits " + this.studyCredits;
+    }
+    
+    
 }
