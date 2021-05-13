@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Study credits " + ollie.credits());
         ollie.study();
         System.out.println("Study credits " + ollie.credits());
-
+        
         int i = 0;
         while (i < 25) {
             ollie.study();
