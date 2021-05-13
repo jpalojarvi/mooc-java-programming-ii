@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 
 public abstract class Box {
+    ArrayList<Item> items = new ArrayList<>();
 
     public abstract void add(Item item);
 
