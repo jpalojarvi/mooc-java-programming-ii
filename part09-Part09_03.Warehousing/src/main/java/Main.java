@@ -1,5 +1,4 @@
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -10,6 +9,10 @@ public class Main {
         System.out.println(juice.getName());
         juice.addToWarehouse(1.0);
         System.out.println(juice);
+
+        ChangeHistory ch = new ChangeHistory();
+        ch.add(99);
+        ch.minValue();
     }
 
 }
