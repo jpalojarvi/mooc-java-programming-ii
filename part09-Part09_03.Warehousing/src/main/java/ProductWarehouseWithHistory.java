@@ -27,6 +27,12 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
         return amountTaken;
     }
 
-
+    public void printAnalysis(){
+        System.out.println("Product: " + this.getName());
+        System.out.println("History: " + this.history());
+        System.out.println("Largest amount of product: " + this.changeHistory.maxValue());
+        System.out.println("Smallest amount of product: " + this.changeHistory.minValue());
+        System.out.println("Average: " + this.changeHistory.average());
+    }
     
 }
