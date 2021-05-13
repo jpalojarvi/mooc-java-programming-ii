@@ -17,8 +17,10 @@ public class Main {
         ProductWarehouseWithHistory fruit = new ProductWarehouseWithHistory("Fruit", 100, 5);
         System.out.println(fruit);
 
-        ProductWarehouseWithHistory pwh = new ProductWarehouseWithHistory("beer", 10, 2);
-        pwh.history();
+        ProductWarehouse pwh = new ProductWarehouseWithHistory("coffee", 10, 5);
+        pwh.addToWarehouse(5);
+        pwh.takeFromWarehouse(7);
+        System.out.println(pwh.getBalance());
     }
 
 }
