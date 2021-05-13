@@ -12,7 +12,7 @@ public class Main {
 
         ChangeHistory ch = new ChangeHistory();
         ch.add(99);
-        ch.minValue();
+        System.out.println();
     }
 
 }
