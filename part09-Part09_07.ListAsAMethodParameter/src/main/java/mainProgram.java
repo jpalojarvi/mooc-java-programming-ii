@@ -21,5 +21,6 @@ public class mainProgram {
         int size = 0;
         size = list.size();
         return size;
+        // return list.size(); this works alone too
     }
 }
