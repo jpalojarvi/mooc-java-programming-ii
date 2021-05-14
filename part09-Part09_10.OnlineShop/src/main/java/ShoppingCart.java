@@ -12,9 +12,13 @@ public class ShoppingCart {
     }
 
     public void add(String product, int price) {
-        Item item = new Item(product, 1, price);
-        contents.put(product, item);
-
+        if (contents.containsKey(product)) {
+            Item item = contents.get(product);
+            item.increaseQuantity();
+        } else {
+            Item item = new Item(product, 1, price);
+            contents.put(product, item);
+        }
     }
 
     public int price() {
@@ -31,7 +35,7 @@ public class ShoppingCart {
     public void print() {
         ArrayList<Item> items = new ArrayList<>();
         items.addAll(contents.values());
-        for (Item iteratedItem : items){
+        for (Item iteratedItem : items) {
             System.out.println(iteratedItem);
         }
     }
