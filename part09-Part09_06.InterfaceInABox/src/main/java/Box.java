@@ -1,7 +1,7 @@
 
 import java.util.ArrayList;
 
-public class Box {
+public class Box implements Packable {
 
     private ArrayList<Packable> items = new ArrayList<>();
     private double capacity;

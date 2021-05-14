@@ -26,8 +26,19 @@ public class Main {
         box.add(new CD("Pink Floyd", "Dark Side of the Moon", 1973));
         box.add(new CD("Wigwam", "Nuclear Nightclub", 1975));
         box.add(new CD("Rendezvous Park", "Closer to Being Here", 2012));
-
         System.out.println(box);
+        
+        Box box2 = new Box(15);
+        box2.add(new Book("J.R.R. Tolkien", "Lord of the Rings", 2));
+        box2.add(new Book("J.R.R. Tolkien", "Lord of the Rings Twin Towers", 3));
+        System.out.println(box2);
+        
+        Box box3 = new Box(20);
+        box3.add(box);
+        box3.add(box2);
+        System.out.println(box3);
+        box3.add(box3);
+        System.out.println(box3);
     }
 
 }
