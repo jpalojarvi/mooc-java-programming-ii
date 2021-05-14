@@ -37,8 +37,8 @@ public class Main {
         box3.add(box);
         box3.add(box2);
         System.out.println(box3);
-        box3.add(box3);
-        System.out.println(box3);
+//        box3.add(box3);           // doesn't work, results in stackoverflow error
+//        System.out.println(box3); // due to deep recursion
     }
 
 }
