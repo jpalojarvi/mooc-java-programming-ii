@@ -21,10 +21,18 @@ public class ShoppingCart {
         int totalPrice = 0;
         ArrayList<Item> items = new ArrayList<>();
         items.addAll(contents.values());
-        for (Item iteratedItem: items){
+        for (Item iteratedItem : items) {
             totalPrice += iteratedItem.price();
         }
-        
+
         return totalPrice;
+    }
+
+    public void print() {
+        ArrayList<Item> items = new ArrayList<>();
+        items.addAll(contents.values());
+        for (Item iteratedItem : items){
+            System.out.println(iteratedItem);
+        }
     }
 }

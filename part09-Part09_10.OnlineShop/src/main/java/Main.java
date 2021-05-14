@@ -42,5 +42,7 @@ public class Main {
         System.out.println("cart price: " + cart.price());
         cart.add("computer", 899);
         System.out.println("cart price: " + cart.price());
+        
+        cart.print();
     }
 }
