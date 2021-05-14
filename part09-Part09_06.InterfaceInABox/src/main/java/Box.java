@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class Box {
 
     private ArrayList<Packable> items = new ArrayList<>();
-    private double currentWeight;
     private double capacity;
 
     public Box(double capacity) {
@@ -13,16 +12,22 @@ public class Box {
     }
 
     public void add(Packable item) {
-        if ((item.weight() + this.currentWeight) <= this.capacity){
+        if ((item.weight() + this.weight()) <= this.capacity) {
             this.items.add(item);
-            this.currentWeight += item.weight();
         }
     }
 
     @Override
     public String toString() {
-        return "Box: " + this.items.size() + " items, total weight " + this.currentWeight + " kg";
+        return "Box: " + this.items.size() + " items, total weight " + this.weight() + " kg";
     }
-    
-    
+
+    public double weight() {
+        double weight = 0;
+        for (Packable iteratedItem : items) {
+            weight += iteratedItem.weight();
+        }
+        return weight;
+    }
+
 }
