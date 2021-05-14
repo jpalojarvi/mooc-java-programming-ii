@@ -20,6 +20,11 @@ public class ShoppingCart {
             contents.put(product, item);
         }
     }
+    // Model solution
+//        public void add(String product, int price) {
+//        this.items.putIfAbsent(product, new Item(product, 0, price));
+//        this.items.get(product).increaseQuantity();
+//    }
 
     public int price() {
         int totalPrice = 0;
@@ -31,6 +36,14 @@ public class ShoppingCart {
 
         return totalPrice;
     }
+    // Model solution
+//        public int price() {
+//        int sum = 0;
+//        for (Item item : this.items.values()) {
+//            sum = sum + item.price();
+//        }
+//        return sum;
+//    }
 
     public void print() {
         ArrayList<Item> items = new ArrayList<>();

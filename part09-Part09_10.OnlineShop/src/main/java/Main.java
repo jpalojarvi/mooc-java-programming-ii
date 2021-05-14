@@ -1,4 +1,7 @@
 
+import java.util.Scanner;
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -28,7 +31,7 @@ public class Main {
 //        for (String product : warehouse.products()) {
 //            System.out.println(product);
 //        }
-//
+
 //        Item item = new Item("milk", 4, 2);
 //        System.out.println("an item that contains 4 milks has the total price of " + item.price());
 //        System.out.println(item);
@@ -44,22 +47,33 @@ public class Main {
 //        System.out.println("cart price: " + cart.price());
 //
 //        cart.print();
+//        ShoppingCart cart2 = new ShoppingCart();
+//        cart2.add("milk", 3);
+//        cart2.print();
+//        System.out.println("cart price: " + cart2.price() + "\n");
+//
+//        cart2.add("buttermilk", 2);
+//        cart2.print();
+//        System.out.println("cart price: " + cart2.price() + "\n");
+//
+//        cart2.add("milk", 3);
+//        cart2.print();
+//        System.out.println("cart price: " + cart2.price() + "\n");
+//
+//        cart2.add("milk", 3);
+//        cart2.print();
+//        System.out.println("cart price: " + cart2.price() + "\n");
 
-        ShoppingCart cart2 = new ShoppingCart();
-        cart2.add("milk", 3);
-        cart2.print();
-        System.out.println("cart price: " + cart2.price() + "\n");
 
-        cart2.add("buttermilk", 2);
-        cart2.print();
-        System.out.println("cart price: " + cart2.price() + "\n");
+        Warehouse warehouse = new Warehouse();
+        warehouse.addProduct("coffee", 5, 10);
+        warehouse.addProduct("milk", 3, 20);
+        warehouse.addProduct("cream", 2, 55);
+        warehouse.addProduct("bread", 7, 8);
 
-        cart2.add("milk", 3);
-        cart2.print();
-        System.out.println("cart price: " + cart2.price() + "\n");
+        Scanner scanner = new Scanner(System.in);
 
-        cart2.add("milk", 3);
-        cart2.print();
-        System.out.println("cart price: " + cart2.price() + "\n");
+        Store store = new Store(warehouse, scanner);
+        store.shop("John");
     }
 }

@@ -26,18 +26,18 @@ public class Warehouse {
     }
 
     public boolean take(String product) {
-        if (this.items.containsKey(product)){
+        if (this.items.containsKey(product)) {
             int stock = items.get(product);
-            if (stock > 0){
-            stock--;
-            this.items.put(product, stock);
-            return true;
+            if (stock > 0) {
+                stock--;
+                this.items.put(product, stock);
+                return true;
             }
         }
         return false;
     }
-    
-    public Set<String> products(){
+
+    public Set<String> products() {
         Set<String> names = this.items.keySet();
         return names;
     }
