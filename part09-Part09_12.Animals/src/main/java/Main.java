@@ -9,6 +9,13 @@ public class Main {
 
         Dog fido = new Dog("Fido");
         fido.bark();
+
+        Cat cat = new Cat();
+        cat.purr();
+        cat.eat();
+
+        Cat garfield = new Cat("Garfield");
+        garfield.purr();
     }
 
 }
