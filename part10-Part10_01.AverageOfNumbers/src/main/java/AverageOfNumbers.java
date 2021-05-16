@@ -17,7 +17,11 @@ public class AverageOfNumbers {
             }
             inputs.add(input);
         }
-        
+        double average = inputs.stream()
+                .mapToInt(s -> Integer.valueOf(s))
+                .average()
+                .getAsDouble();
+        System.out.println("average of the numbers: " + average);
         
     }
 }
