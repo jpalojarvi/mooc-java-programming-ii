@@ -9,8 +9,9 @@ public class Population implements Comparable<Population> {
     public Population(String country, int year, String gender, double literacyPercentage) {
         this.country = country;
         this.year = year;
-        this.gender = gender;
-        this.literacyPercentage = literacyPercentage;
+        String[] splitGender = gender.split(" ");
+        this.gender = splitGender[1].trim();
+       this.literacyPercentage = literacyPercentage;
 
     }
 

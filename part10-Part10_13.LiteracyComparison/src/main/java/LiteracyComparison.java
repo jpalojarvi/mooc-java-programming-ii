@@ -26,10 +26,4 @@ public class LiteracyComparison {
                 .sorted()
                 .forEach(population -> System.out.println(population));
     }
-    
-    public static ArrayList<Population> sortPopulations(){
-        ArrayList<Population> sortedPopulations = new ArrayList<>();
-        
-        return sortedPopulations;
-    }
 }
