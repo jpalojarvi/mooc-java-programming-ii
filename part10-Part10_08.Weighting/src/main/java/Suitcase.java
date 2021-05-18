@@ -27,9 +27,14 @@ public class Suitcase {
 //        indeksi++;
 //        }
 //        return summa;
-return Items.stream()
-        .mapToInt(value -> value.getWeight())
-        .reduce(0, (previousSum, value) -> previousSum + value);
+// reduce()
+//return Items.stream()
+//        .mapToInt(value -> value.getWeight())
+//        .reduce(0, (previousSum, value) -> previousSum + value);
+// model solution, remember sum()
+        return this.Items.stream()
+                .mapToInt(t -> t.getWeight())
+                .sum();
     }
 
     public void printItems() {
@@ -39,8 +44,11 @@ return Items.stream()
 //        System.out.println(t);
 //        indeksi++;
 //        }
-Items.stream()
-        .forEach(item -> System.out.println(item));
+
+        Items.stream()
+                .forEach(item -> System.out.println(item));
+        // model solution, apparently stream() isn't necessary
+//this.Items.forEach(t -> System.out.println(t));
     }
 
     public Item heaviestItem() {
