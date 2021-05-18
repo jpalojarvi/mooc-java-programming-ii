@@ -27,10 +27,16 @@ public class Hold {
 //        summa += this.suitcases.get(indeksi).totalWeight();
 //        indeksi++;
 //        }
-        int summa = suitcases.stream()
-                .map(suitcase -> suitcase.totalWeight())
-                .reduce(0, (previousSum, value) -> previousSum + value);
-        return summa;
+
+// reduce()
+//        int summa = suitcases.stream()
+//                .map(suitcase -> suitcase.totalWeight())
+//                .reduce(0, (previousSum, value) -> previousSum + value);
+//        return summa;
+        // model solution, remember sum()
+        return this.suitcases.stream()
+                .mapToInt(m -> m.totalWeight())
+                .sum();
     }
 
     public void printItems() {
