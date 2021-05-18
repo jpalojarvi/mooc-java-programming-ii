@@ -13,9 +13,10 @@ public class Main {
         
         Hold hold = new Hold(10);
         hold.addSuitcase(suitcase);
-        hold.printItems();
+//        hold.printItems();
         
         System.out.println(suitcase.totalWeight());
+        suitcase.printItems();
         
     }
 
