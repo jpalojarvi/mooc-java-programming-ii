@@ -39,6 +39,8 @@ public class Hold {
         this.suitcases.get(indeksi).printItems();
         indeksi++;
         }
+//suitcases.stream()
+//        .forEach(suitcase -> suitcase.printItems());
     }
 
     @Override

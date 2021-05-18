@@ -9,7 +9,11 @@ public class Main {
         
         suitcase.addItem(book);
         suitcase.addItem(book);
-        System.out.println(suitcase.totalWeight());
+//        System.out.println(suitcase.totalWeight());
+        
+        Hold hold = new Hold(10);
+        hold.addSuitcase(suitcase);
+        hold.printItems();
         
     }
 
