@@ -22,5 +22,12 @@ public class LiteracyComparison {
         } catch (Exception e) {
             System.out.println("Error: " + e);
         }
+        populations.stream().forEach(population -> System.out.println(population));
+    }
+    
+    public static ArrayList<Population> sortPopulations(){
+        ArrayList<Population> sortedPopulations = new ArrayList<>();
+        
+        return sortedPopulations;
     }
 }

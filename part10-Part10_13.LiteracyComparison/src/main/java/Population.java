@@ -18,6 +18,20 @@ public class Population implements Comparable<Population> {
         return literacyPercentage;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    
+    
     @Override
     public int compareTo(Population o) {
         if (this.getLiteracyPercentage() < o.getLiteracyPercentage()) {
@@ -27,6 +41,11 @@ public class Population implements Comparable<Population> {
         } else {
             return 0;
         }
+    }
+
+    @Override
+    public String toString() {
+        return this.getCountry() + " (" + this.getYear() + "), " + this.getGender() +", " + this.getLiteracyPercentage();
     }
 
 }
