@@ -15,6 +15,8 @@ public class Main {
         hold.addSuitcase(suitcase);
         hold.printItems();
         
+        System.out.println(suitcase.totalWeight());
+        
     }
 
 }

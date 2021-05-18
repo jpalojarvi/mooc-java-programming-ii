@@ -27,6 +27,9 @@ public class Suitcase {
         indeksi++;
         }
         return summa;
+//return Items.stream()
+//        .mapToInt(value -> value.getWeight())
+//        .reduce(0, (previousSum, value) -> previousSum + value);
     }
 
     public void printItems() {

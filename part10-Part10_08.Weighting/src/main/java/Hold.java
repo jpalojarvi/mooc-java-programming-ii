@@ -34,13 +34,13 @@ public class Hold {
     }
 
     public void printItems() {
-        int indeksi = 0;
-        while (indeksi < this.suitcases.size()) {
-        this.suitcases.get(indeksi).printItems();
-        indeksi++;
-        }
-//suitcases.stream()
-//        .forEach(suitcase -> suitcase.printItems());
+//        int indeksi = 0;
+//        while (indeksi < this.suitcases.size()) {
+//        this.suitcases.get(indeksi).printItems();
+//        indeksi++;
+//        }
+suitcases.stream()
+        .forEach(suitcase -> suitcase.printItems());
     }
 
     @Override
