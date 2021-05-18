@@ -20,7 +20,9 @@ public class MainProgram {
         }
         System.out.println(books.size() + " books in total.");
         System.out.println("Books: ");
-        books.stream().forEach(book -> System.out.println(book));
+        books.stream()
+                .sorted()
+                .forEach(book -> System.out.println(book));
     }
 
 }
