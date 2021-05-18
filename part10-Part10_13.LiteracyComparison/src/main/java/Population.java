@@ -1,5 +1,5 @@
 
-public class Population {
+public class Population implements Comparable<Population> {
 
     private String country;
     private int year;
@@ -17,6 +17,16 @@ public class Population {
     public double getLiteracyPercentage() {
         return literacyPercentage;
     }
-    
-    
+
+    @Override
+    public int compareTo(Population o) {
+        if (this.getLiteracyPercentage() < o.getLiteracyPercentage()) {
+            return -1;
+        } else if (this.getLiteracyPercentage() > o.getLiteracyPercentage()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
 }
