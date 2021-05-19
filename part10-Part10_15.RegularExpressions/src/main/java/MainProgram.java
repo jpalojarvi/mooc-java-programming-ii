@@ -8,6 +8,7 @@ public class MainProgram {
 
         System.out.println(checker.isDayOfWeek("sun"));
         System.out.println(checker.allVowels("ouaouaeiaeoi"));
+        System.out.println(checker.timeOfDay("17:23:05"));
 
     }
 
