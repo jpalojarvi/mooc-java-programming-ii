@@ -21,12 +21,21 @@ public class Employees {
 
     public void print(Education education) {
         Iterator<Person> iterator = roster.iterator();
-
         while (iterator.hasNext()) {
-                Person inspected = iterator.next();
-                if (inspected.getEducation() == education){
-                    System.out.println(inspected);
-                }
+            Person inspected = iterator.next();
+            if (inspected.getEducation() == education) {
+                System.out.println(inspected);
             }
         }
     }
+
+    public void fire(Education education) {
+        Iterator<Person> iterator = roster.iterator();
+        while (iterator.hasNext()) {
+            Person inspected = iterator.next();
+            if (inspected.getEducation() == education) {
+                iterator.remove();
+            }
+        }
+    }
+}
