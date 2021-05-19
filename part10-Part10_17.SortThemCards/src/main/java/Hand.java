@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Hand implements Comparable<Hand> {
+public class Hand extends BySuitInValueOrder implements Comparable<Hand> {
 
     private ArrayList<Card> hand = new ArrayList<>();
 
@@ -33,5 +33,11 @@ public class Hand implements Comparable<Hand> {
             otherHandValue += o.hand.get(i).getValue();
         }
         return thisHandValue - otherHandValue;
+    }
+    
+    public void sortBySuit(){
+        this.hand.sort(this);
+        
+        
     }
 }
