@@ -13,6 +13,10 @@ public class Program {
         System.out.println(ten.isOn());
         ten.setOff();
         System.out.println(ten.isOn());
+        
+        TemperatureSensor temp = new TemperatureSensor();
+        temp.setOn();
+        System.out.println(temp.read());
     }
 
 }
