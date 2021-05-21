@@ -17,4 +17,14 @@ public class SaveableDictionary {
     public String translate(String word) {
         return this.dictionary.getOrDefault(word, null);
     }
+
+    public void delete(String word) {
+        String valueToBeRemoved;
+        if (this.dictionary.containsValue(word)) {
+            valueToBeRemoved = this.dictionary.get(word);
+            this.dictionary.remove(valueToBeRemoved);
+        }
+        this.dictionary.remove(word);
+
+    }
 }
