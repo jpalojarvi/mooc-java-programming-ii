@@ -5,6 +5,10 @@ import java.util.Random;
 
 public class TemperatureSensor implements Sensor{
     private boolean isOn;
+    
+    public TemperatureSensor(){
+        
+    }
 
     @Override
     public boolean isOn() {
