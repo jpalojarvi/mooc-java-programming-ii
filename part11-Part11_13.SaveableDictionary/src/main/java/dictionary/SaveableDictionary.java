@@ -1,12 +1,39 @@
 package dictionary;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class SaveableDictionary {
 
     private HashMap<String, String> dictionary = new HashMap<>();
+    private String filename;
 
     public SaveableDictionary() {
+    }
+
+    public SaveableDictionary(String file) throws Exception {
+        this.filename = file;
+    }
+
+    public boolean load() {
+        try {
+            // FileWriter fileWriter = new FileWriter(this.filename);
+            Scanner fileReader = new Scanner(Paths.get(filename));
+
+            while (fileReader.hasNextLine()) {
+                String line = fileReader.nextLine();
+                String[] parts = line.split(":");
+                this.dictionary.putIfAbsent(parts[0], parts[1]);
+                this.dictionary.putIfAbsent(parts[1], parts[0]);
+            }
+
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 
     public void add(String words, String translation) {
