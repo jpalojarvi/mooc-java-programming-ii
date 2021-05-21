@@ -1,20 +1,22 @@
-
 package application;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class AverageSensor implements Sensor{
+public class AverageSensor implements Sensor {
+
     private ArrayList<Sensor> sensors = new ArrayList<>();
-    
-    public void addSensor(Sensor toAdd){
+    private ArrayList<Integer> readings = new ArrayList<>();
+
+    public void addSensor(Sensor toAdd) {
         this.sensors.add(toAdd);
     }
 
     @Override
     public boolean isOn() {
         int sensorsOn = 0;
-        for (int i = 0; i < sensors.size(); i++){
-            if (sensors.get(i).isOn()){
+        for (int i = 0; i < sensors.size(); i++) {
+            if (sensors.get(i).isOn()) {
                 sensorsOn++;
             }
         }
@@ -34,10 +36,16 @@ public class AverageSensor implements Sensor{
     @Override
     public int read() {
         int sum = 0;
-        for (int i = 0; i < sensors.size(); i++){
+        for (int i = 0; i < sensors.size(); i++) {
             sum += sensors.get(i).read();
+
         }
-        return sum/sensors.size();
+        this.readings.add(sum / sensors.size());
+        return sum / sensors.size();
+    }
+
+    public List<Integer> readings() {
+        return this.readings;
     }
 
 }
