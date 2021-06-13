@@ -15,8 +15,13 @@ public class MainProgram {
         /*
          * Uncomment the comment below when you have completed the compareTo-method.
          */
-        //Collections.sort(humans);
+        Collections.sort(humans);
         System.out.println(humans);
 
+        Human first = new Human("Aku", 0);
+        Human second = new Human("Roope", -1);
+        System.out.println(first.compareTo(second));
+//        output:
+//        -214748364
     }
 }

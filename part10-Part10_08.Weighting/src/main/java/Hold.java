@@ -21,21 +21,32 @@ public class Hold {
     }
 
     public int totalWeight() {
-        int summa = 0;
-        int indeksi = 0;
-        while (indeksi < this.suitcases.size()) {
-        summa += this.suitcases.get(indeksi).totalWeight();
-        indeksi++;
-        }
-        return summa;
+//        int summa = 0;
+//        int indeksi = 0;
+//        while (indeksi < this.suitcases.size()) {
+//        summa += this.suitcases.get(indeksi).totalWeight();
+//        indeksi++;
+//        }
+
+// reduce()
+//        int summa = suitcases.stream()
+//                .map(suitcase -> suitcase.totalWeight())
+//                .reduce(0, (previousSum, value) -> previousSum + value);
+//        return summa;
+        // model solution, remember sum()
+        return this.suitcases.stream()
+                .mapToInt(m -> m.totalWeight())
+                .sum();
     }
 
     public void printItems() {
-        int indeksi = 0;
-        while (indeksi < this.suitcases.size()) {
-        this.suitcases.get(indeksi).printItems();
-        indeksi++;
-        }
+//        int indeksi = 0;
+//        while (indeksi < this.suitcases.size()) {
+//        this.suitcases.get(indeksi).printItems();
+//        indeksi++;
+//        }
+suitcases.stream()
+        .forEach(suitcase -> suitcase.printItems());
     }
 
     @Override

@@ -6,9 +6,12 @@ public class Person {
     private int age;
 
     public Person(String name, int age) {
-
-        this.name = name;
-        this.age = age;
+        if (name == null || name.isEmpty() || name.length() > 40 || age < 0 || age > 120) {
+            throw new IllegalArgumentException("The name cannot be null, empty, or over 40 characters in length. The age should be between 0 and 120.");
+        } else {
+            this.name = name;
+            this.age = age;
+        }
     }
 
     public String getName() {
